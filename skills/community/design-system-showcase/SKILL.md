@@ -113,36 +113,9 @@ Source rules:
 
 Convert the research into a constraint system.
 
-Write `references/design.md` with:
+Write `references/design.md` with the DESIGN.md Spec: ./references/design.spec.md
 
-- Design thesis: one sentence that explains the visual system
-- Invariants: 8-12 rules the agent should not break casually
-- Color tokens: brand, accent, surfaces, text levels, borders, semantic states
-- Typography: font stacks, weights, scale, line-height, language fallbacks
-- Spacing: base unit, page margins, section rhythm, component padding
-- Components: cards, tags, buttons, tables, metrics, quotes, diagrams
-- Layout patterns: hero, demo grid, reference page, document page, slide page
-- Anti-patterns: concrete mistakes the agent is likely to produce
-
-Write `references/tokens.json` as the machine-readable subset:
-
-```json
-{
-  "--surface": "#f5f4ed",
-  "--panel": "#faf9f5",
-  "--brand": "#1B365D",
-  "--text": "#141413",
-  "--muted": "#6b6a64",
-  "--border": "#e8e6dc"
-}
-```
-
-Token rules:
-
-- Keep token names stable across CSS, templates, and docs.
-- Do not allow demo CSS to drift from `tokens.json`.
-- Use solid colors for surfaces and badges when rendering to PDF.
-- Avoid decorative palettes that are not present in the source material.
+Write `references/tokens.json` as the machine-readable subset.
 
 ### Step 4: Define the Skill Behavior
 
