@@ -1,6 +1,6 @@
 ---
 name: design-system-showcase
-description: Use this skill when the user wants to create a design system showcase project: a portable Agent Skill plus public demo site, design tokens, references, templates, generated assets, PDFs, PNG previews, slide decks, diagrams, packaging scripts, and verification loops. Trigger for requests about building a branded design system repository, extracting a project's visual language, turning product research into reusable templates, or generating polished asset demos from a style system.
+description: Use this skill when the user wants to create a design system showcase project, a portable Agent Skill plus public demo site, design tokens, references, templates, generated assets, PDFs, PNG previews, slide decks, diagrams, packaging scripts, and verification loops. Trigger for requests about building a branded design system repository, extracting a project's visual language, turning product research into reusable templates, or generating polished asset demos from a style system.
 ---
 
 # Design System Showcase Skill
