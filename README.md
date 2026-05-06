@@ -1,10 +1,21 @@
 # SKILL
 
-| SKills | Description | Status |
-| --- |  --- | --- |
-| [Design System Showcase](./skills/community/design-system-showcase) <sup>Community</sup> | A template for showcasing design systems, with a focus on clear documentation and practical examples. | ![Beta](https://img.shields.io/badge/status-Beta-yellow) |
-| [Agent Design](./skills/agents/agent-design) <sup>Agents</sup> | A skill for designing agents, including best practices and examples. | ![In Progress](https://img.shields.io/badge/status-In%20progress-yellow) |
-| [Exec Plan](./skills/dev/execplan) <sup>Dev</sup> | A skill for creating execution plans, with templates and guidelines. | ![Stable](https://img.shields.io/badge/status-Stable-green) |
+## Community
+
+These skills are inspired by the community, and they come from some excellent practices and projects in the community.
+
+| Skill | Description |
+| --- | --- |
+| [Design System Showcase](./skills/community/design-system-showcase) | A template for showcasing design systems, with a focus on clear documentation and practical examples. |
+
+## Dev
+
+These skills are focused on development practices, tools, and templates.
+
+| Skill | Description |
+| --- | --- |
+| [Agent Design](./skills/agents/agent-design) | A skill for designing agents, including best practices and examples. |
+| [Exec Plan](./skills/dev/execplan) | A skill for creating execution plans, with templates and guidelines. |
 
 ## References
 
