@@ -17,9 +17,17 @@ These skills are focused on development practices, tools, and templates.
 | [Agent Design](./skills/agents/agent-design) | A skill for designing agents, including best practices and examples. |
 | [Exec Plan](./skills/dev/execplan) | A skill for creating execution plans, with templates and guidelines. |
 
+## Others
+
+- [AGENTS-5.2-codex.md](./AGENTS-5.2-codex.md) - A codex for AGENTS 5.2 Codex, with detailed information and guidelines.
+
 ## References
 
 #### Design System Showcase
 
 - https://github.com/tw93/kami - Original design system showcase repo.
 - https://github.com/Innei/Yohaku - Another design system showcase repo, with a focus on modern structure and tooling.
+
+#### Others
+
+- Thanks to Xuanwo's AGENTS.md for the AGENTS-5.2-codex.md structure inspiration.
