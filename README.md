@@ -1,5 +1,9 @@
 # SKILL
 
+```bash
+npx skills wibus-wee/SKILL
+```
+
 ## Community
 
 These skills are inspired by the community, and they come from some excellent practices and projects in the community.
