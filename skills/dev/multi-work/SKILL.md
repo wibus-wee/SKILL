@@ -26,7 +26,7 @@ Main Agent
   │
   ├─ Final integration review
   │
-  └─ zhi report
+  └─ report
 ```
 
 Per-node loop:
@@ -51,7 +51,7 @@ Main Agent
 
 ## Rules
 
-1. Main Agent owns Plan File, Workflow, merge, and zhi report.
+1. Main Agent owns Plan File, Workflow, merge, and report.
 2. Sub agents start with empty context.
 3. Spawn prompt should be thin:
    - role
@@ -68,4 +68,4 @@ Main Agent
    If still failing, escalate to Main Agent with unresolved issues.
 9. If a failed review reveals an architectural issue, Fix Agent must not patch around it. It must return an Architecture Escalation Report to Main Agent.
 10. Main Agent owns all architecture-level changes.
-11. Only Main Agent uses zhi.
+11. Only Main Agent report to user.
