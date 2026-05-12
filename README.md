@@ -10,7 +10,7 @@ These skills are inspired by the community, and they come from some excellent pr
 
 | Skill | Description |
 | --- | --- |
-| [Design System Showcase](./skills/community/design-system-showcase) | A template for showcasing design systems, with a focus on clear documentation and practical examples. |
+| [Design System Showcase](./skills/community/design-system-showcase) [^kami] [^yohaku] | A template for showcasing design systems, with a focus on clear documentation and practical examples. |
 
 ## Dev
 
@@ -24,15 +24,8 @@ These skills are focused on development practices, tools, and templates.
 
 ## Others
 
-- [AGENTS-5.2-codex.md](./AGENTS-5.2-codex.md) - A codex for AGENTS 5.2 Codex, with detailed information and guidelines.
+- [AGENTS-5.2-codex.md](./AGENTS-5.2-codex.md) [^xuanwo] — A codex for AGENTS 5.2 Codex, with detailed information and guidelines.
 
-## References
-
-#### Design System Showcase
-
-- https://github.com/tw93/kami - Original design system showcase repo.
-- https://github.com/Innei/Yohaku - Another design system showcase repo, with a focus on modern structure and tooling.
-
-#### Others
-
-- Thanks to Xuanwo's AGENTS.md for the AGENTS-5.2-codex.md structure inspiration.
+[^kami]: [tw93/kami](https://github.com/tw93/kami) — Original design system showcase repo.
+[^yohaku]: [Innei/Yohaku](https://github.com/Innei/Yohaku) — Another design system showcase repo, with a focus on modern structure and tooling.
+[^xuanwo]: Thanks to Xuanwo's AGENTS.md for the AGENTS-5.2-codex.md structure inspiration.
