@@ -1,7 +1,7 @@
 # SKILL
 
 ```bash
-npx skills wibus-wee/SKILL
+npx skills add wibus-wee/SKILL
 ```
 
 ## Community
