@@ -16,6 +16,7 @@ These skills are focused on development practices, tools, and templates.
 | --- | --- |
 | [Agent Design](./skills/agents/agent-design) | A skill for designing agents, including best practices and examples. |
 | [Exec Plan](./skills/dev/execplan) | A skill for creating execution plans, with templates and guidelines. |
+| [Multi-Work](./skills/dev/multi-work) | A skill for multi-agent parallel execution with independent review/fix loops. |
 
 ## Others
 
