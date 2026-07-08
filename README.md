@@ -28,7 +28,8 @@ These skills are focused on visual design, including prompts for text-safe backg
 
 | Skill | Description |
 | --- | --- |
-| [Text-Safe Background Prompts](./skills/visual/text-safe-background-prompts) [^lumno] [^private] | A skill for creating text-safe background prompts, with naming schemes and theme groups. |
+| [Text-Safe Background Prompts](./skills/visual/text-safe-background-prompts) [^lumno] | A skill for creating text-safe background prompts, with naming schemes and theme groups. |
+| [Premium Abstract Background](./skills/visual/premium-abstract-background) | A skill for generating reusable prompts for premium minimalist 3D abstract backgrounds, with controlled text-safe areas and high-end aesthetics. |
 
 ## Others
 
@@ -38,4 +39,3 @@ These skills are focused on visual design, including prompts for text-safe backg
 [^yohaku]: [Innei/Yohaku](https://github.com/Innei/Yohaku) — Another design system showcase repo, with a focus on modern structure and tooling.
 [^xuanwo]: Thanks to Xuanwo's AGENTS.md for the AGENTS-5.2-codex.md structure inspiration.
 [^lumno]: [Lumno](https://lumno.kubai.design/) — Thanks to Lumno's work on text-safe background prompts for the naming scheme and theme groups inspiration.
-[^private]: This skill is private and not open for public contributions because it contains sensitive information.
