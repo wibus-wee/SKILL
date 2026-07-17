@@ -32,6 +32,11 @@ Three axioms everything else derives from:
 **When to add orchestration?**
 - Only when simpler structures demonstrably fail. Never for architectural elegance alone.
 
+**Can I make a skill always on?**
+- No. Skills are not permanently active by default. They are activated by relevance.
+- Do not design a skill as a hidden, always-on system prompt section. If you truly need global behavior, make the activation rule explicit, for example: `Always load the xxx skill first.`
+- If you want an always-on skill, state that intent clearly in both the system prompt and the skill description, for example: `Load this skill unconditionally, regardless of the user's current request.`
+
 ## Red Flags
 
 If you see any of these, the design has likely drifted:

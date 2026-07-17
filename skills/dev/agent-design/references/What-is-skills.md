@@ -28,6 +28,8 @@ Skills use **progressive disclosure** to manage context efficiently:
 
 This approach keeps agents fast while giving them access to more context on demand.
 
+> Skills are activated by relevance, not by default. Do not treat a skill as an always-on hidden system prompt section. If you intentionally need global activation, make the rule explicit in both the system prompt and the skill description.
+
 ## The SKILL.md file
 
 Every skill starts with a `SKILL.md` file containing YAML frontmatter and Markdown instructions:
