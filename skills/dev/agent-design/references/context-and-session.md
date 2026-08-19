@@ -59,6 +59,23 @@ Things that maintain context quality:
 
 ---
 
+## Rediscoverability Before Recovery Machinery
+
+Compaction removes information from the model's immediate inference context. It does not remove information from the environment. A file that remains in the workspace, a skill that remains discoverable, or repository instructions that can be inspected again are not lost capabilities.
+
+Do not turn hypothetical loss of salience into runtime machinery. In particular, do not add recovery manifests, dependency ledgers, recall indexes, automatic reinjection, or dedicated retrieval tools merely because the agent might forget that it previously read something.
+
+Use this order:
+
+1. Confirm what compaction actually removes and what remains externally available.
+2. Let the agent continue with its existing tools and environmental feedback.
+3. Evaluate whether it rediscovers the source when the task makes that source relevant again.
+4. Add recovery behavior only when repeated realistic evaluations show material failure that ordinary reinspection does not correct.
+
+"The agent may forget the path" is a hypothesis, not a finding. Prefer the zero-mechanism baseline while the environment remains inspectable. Recovery machinery is justified when information is genuinely irrecoverable or inaccessible after compaction, or when measured behavior demonstrates a persistent rediscovery failure.
+
+---
+
 ## Cache-Friendly Context Architecture
 
 Most agent systems get context assembly wrong. They rebuild the entire system prompt each turn—concatenating stable instructions with volatile state (mode, goal, progress, timestamps). This is the **append-system-prompt** anti-pattern: treating the system prompt as a mutable buffer that gets reconstructed from scratch every turn.
