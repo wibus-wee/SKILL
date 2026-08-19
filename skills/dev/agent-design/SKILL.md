@@ -15,6 +15,13 @@ Three axioms everything else derives from:
 
 ## Quick Decision Rules
 
+**Do I need a new model-facing interface at all?**
+- Inventory the tools and native resource types already available before proposing a new tool.
+- If existing tools can perform the operation directly, reuse them. Do not create a domain-named alias around an existing capability.
+- Prefer native substrates: expose a file as a real readable path, a web resource as a URL, and a process through an existing process or shell interface.
+- Internal runtime identities such as digests, blob refs, cache keys, and database IDs should remain internal unless the model must operate on that namespace directly.
+- Require a new tool to cross a genuinely new capability, permission, atomicity, or trust boundary. See [Tool Admission Gate](./references/tool-design.md#tool-admission-gate).
+
 **Tool or Skill?**
 - New system boundary (shell, filesystem, web, external API) → **Tool**
 - Teaching the agent to use an existing capability reliably → **Skill**
@@ -40,7 +47,9 @@ Three axioms everything else derives from:
 ## Red Flags
 
 If you see any of these, the design has likely drifted:
-- A tool that encodes "how to use it" in its interface → [Interface Wrapping](./references/tool-design.md)
+- A new tool that only renames or wraps an operation already available through existing tools → [Capability Alias](./references/tool-design.md#capability-alias-and-domain-noun-tool-fallacy)
+- A domain resource represented by an opaque model-facing ID when it could be exposed as a native path or URL → [Native Substrate](./references/tool-design.md#prefer-native-substrates)
+- A tool that encodes "how to use it" in its interface → [Interface Wrapping](./references/tool-design.md#interface-wrapping-as-knowledge-displacement)
 - An agent that reports its state more than it acts → [Meta-Reporting](./references/anti-patterns.md)
 - A coordinator that every agent must ask before doing anything → [Orchestration Gravity](./references/patterns.md)
 - Approval gates on every meaningful action → [Safe Mode Trap](./references/anti-patterns.md)
