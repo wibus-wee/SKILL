@@ -47,6 +47,18 @@ Common tool design failures:
 - Missing information about expected output format or error signals
 - Paths, IDs, or references that require the agent to know context it doesn't have (→ prefer absolute paths over relative)
 
+### Evaluating Whether a Tool Should Exist
+
+Do not evaluate only whether a proposed tool is usable. First test whether it is necessary:
+
+1. Give the designer an inventory of existing tools and a domain resource such as an artifact, report, or snapshot.
+2. Ask it to expose the resource to the model.
+3. Check whether it reuses a native substrate and existing tool, or invents a domain-specific alias.
+
+The design fails this test if it proposes `read_artifact(path)` when the artifact can be materialized as a readable path and `read_file(path)` already exists. Renaming an opaque ID to `path` does not fix the design if the new tool still duplicates an existing capability.
+
+When a dedicated tool is retained, require the design to identify the exact new capability, permission, trust, atomicity, or invariant boundary that justifies it.
+
 ---
 
 ## Evaluating Skill Design
@@ -67,6 +79,8 @@ When reviewing an agent design, watch for:
 
 | Observation | Likely Issue |
 |-------------|-------------|
+| New tool duplicates an existing operation under a domain-specific name | Capability Alias / Domain Noun → Tool Fallacy |
+| Opaque model-facing ID for a resource that could be a path or URL | Representation problem—prefer a native substrate |
 | Tool with many required structured parameters | Possible Interface Wrapping—should this be a Skill? |
 | Agent produces long plans before every action | Administrative Self-Consciousness |
 | State stored in database, injected back into context | State Externalization Fallacy |
