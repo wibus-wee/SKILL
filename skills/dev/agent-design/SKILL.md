@@ -15,6 +15,13 @@ Three axioms everything else derives from:
 
 ## Quick Decision Rules
 
+**Do I need a new model-facing interface at all?**
+- Inventory the tools and native resource types already available before proposing a new tool.
+- If existing tools can perform the operation directly, reuse them. Do not create a domain-named alias around an existing capability.
+- Prefer native substrates: expose a file as a real readable path, a web resource as a URL, and a process through an existing process or shell interface.
+- Internal runtime identities such as digests, blob refs, cache keys, and database IDs should remain internal unless the model must operate on that namespace directly.
+- Require a new tool to cross a genuinely new capability, permission, atomicity, or trust boundary. See [Tool Admission Gate](./references/tool-design.md#tool-admission-gate).
+
 **Tool or Skill?**
 - New system boundary (shell, filesystem, web, external API) → **Tool**
 - Teaching the agent to use an existing capability reliably → **Skill**
@@ -32,6 +39,12 @@ Three axioms everything else derives from:
 **When to add orchestration?**
 - Only when simpler structures demonstrably fail. Never for architectural elegance alone.
 
+**Does compaction or context loss require recovery machinery?**
+- Not by default. Information leaving the context window is not a capability loss when the source remains available through existing tools.
+- Let the agent rediscover files, skills, repository instructions, and other inspectable resources when the task makes them relevant again.
+- "The agent may forget" is a hypothesis, not evidence for a manifest, dependency ledger, recall index, automatic reinjection, or new tool.
+- Add recovery machinery only after realistic behavioral evaluations demonstrate repeated, material failure that ordinary environmental reinspection does not correct.
+
 **Can I make a skill always on?**
 - No. Skills are not permanently active by default. They are activated by relevance.
 - Do not design a skill as a hidden, always-on system prompt section. If you truly need global behavior, make the activation rule explicit, for example: `Always load the xxx skill first.`
@@ -40,7 +53,10 @@ Three axioms everything else derives from:
 ## Red Flags
 
 If you see any of these, the design has likely drifted:
-- A tool that encodes "how to use it" in its interface → [Interface Wrapping](./references/tool-design.md)
+- A new tool that only renames or wraps an operation already available through existing tools → [Capability Alias](./references/tool-design.md#capability-alias-and-domain-noun-tool-fallacy)
+- A domain resource represented by an opaque model-facing ID when it could be exposed as a native path or URL → [Native Substrate](./references/tool-design.md#prefer-native-substrates)
+- A tool that encodes "how to use it" in its interface → [Interface Wrapping](./references/tool-design.md#interface-wrapping-as-knowledge-displacement)
+- A recovery manifest, recall layer, or automatic reinjection designed only because the agent might forget an inspectable resource after compaction → [Rediscoverability Before Recovery](./references/context-and-session.md#rediscoverability-before-recovery-machinery)
 - An agent that reports its state more than it acts → [Meta-Reporting](./references/anti-patterns.md)
 - A coordinator that every agent must ask before doing anything → [Orchestration Gravity](./references/patterns.md)
 - Approval gates on every meaningful action → [Safe Mode Trap](./references/anti-patterns.md)
