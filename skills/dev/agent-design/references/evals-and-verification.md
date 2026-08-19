@@ -59,6 +59,14 @@ The design fails this test if it proposes `read_artifact(path)` when the artifac
 
 When a dedicated tool is retained, require the design to identify the exact new capability, permission, trust, atomicity, or invariant boundary that justifies it.
 
+### Evaluating Context-Recovery Claims
+
+Reject findings that infer a system defect solely because compaction removes previously seen content from the context window. First determine whether the source remains available through existing tools, then run a realistic continuation test.
+
+If the agent can rediscover and reread the source when it becomes relevant, no recovery mechanism is justified. "The agent may forget the path" is not a finding until repeated evaluations show material task failure. Do not recommend manifests, dependency ledgers, recall indexes, automatic reinjection, or new tools from that hypothesis alone.
+
+Recovery design becomes justified only when the information is no longer obtainable from the environment, or measured behavior shows that ordinary environmental reinspection repeatedly fails.
+
 ---
 
 ## Evaluating Skill Design
@@ -81,6 +89,7 @@ When reviewing an agent design, watch for:
 |-------------|-------------|
 | New tool duplicates an existing operation under a domain-specific name | Capability Alias / Domain Noun → Tool Fallacy |
 | Opaque model-facing ID for a resource that could be a path or URL | Representation problem—prefer a native substrate |
+| Recovery system justified only by "the agent may forget after compaction" | Speculative scaffolding—test unassisted rediscovery first |
 | Tool with many required structured parameters | Possible Interface Wrapping—should this be a Skill? |
 | Agent produces long plans before every action | Administrative Self-Consciousness |
 | State stored in database, injected back into context | State Externalization Fallacy |
